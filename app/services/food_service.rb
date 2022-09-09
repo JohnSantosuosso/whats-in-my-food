@@ -1,7 +1,7 @@
 class FoodService
   class << self
     def call_for_a_food(food_name)
-      response = connection.get("/fdc/v1/foods/search?&query=sweet%20potatoes")
+      response = connection.get("/fdc/v1/foods/search?&query=#{food_name}")
       parse_data(response)
     end
 
